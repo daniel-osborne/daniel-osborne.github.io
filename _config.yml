@@ -2,7 +2,7 @@
 title               : dosborne.me
 description         : >-
                       I can build a network but I might screw up
-                      a patch cable, i'm colorblind :smile:.
+                      a patch cable, i'm colorblind :thumbsup:.
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : daniel-osborne/daniel-osborne.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
