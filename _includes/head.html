@@ -1,5 +1,4 @@
 <head>
-
     {% assign title = page.title | default: site.title | escape %}
     {% assign description = page.description | default: site.description | strip_html | strip_newlines | truncate: 160 %}
     {% assign image = page.image | default: site.author.image %}
@@ -41,5 +40,5 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QXM3Q657N"></script>
     
     {% include GoogleTagManager_head.liquid %}
-
+    {% seo %}
   </head>
