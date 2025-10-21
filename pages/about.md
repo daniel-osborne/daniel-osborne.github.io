@@ -36,7 +36,21 @@ weight: 3
   {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
   {% include about/skills.html title="Other Skills" source=site.data.other-skills %}
 </div>
-
+<div class="mt-5 wow animated fadeIn" data-wow-delay=".25s">
+  <h2 class="mb-4 text-left">Certifications</h2>
+  {% if site.data.certifications %}
+    <div class="row justify-content-center">
+     {% for cert in site.data.certifications %}
+        {% include about/certification-card.html certification=cert cert_col_class='col-md-6' %} {% comment %} Adjust columns: 2 on medium, 3 on large screens {% endcomment %}
+     {% endfor %}
+    </div>
+  {% else %}
+    <div class="col-12 text-center text-muted">
+      <p>No certifications listed yet.</p>
+    </div>
+  {% endif %}
+</div>
 <div class="wow animated fadeIn" data-wow-delay=".25s">
+  <h2 class="mb-4 text-left">Timeline</h2>
   {% include about/timeline.html %}
 </div>

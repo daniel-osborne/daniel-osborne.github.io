@@ -1,0 +1,48 @@
+{% comment %} _includes/about/certification-card.html {% endcomment %}
+
+{%- assign cert = include.certification -%}
+
+{%- comment -%} Determine Styles based on certification data {% endcomment -%}
+{%- assign card_style  = '' -%}
+{%- assign text_style  = 'text-themed' -%}
+{%- assign badge_style = 'badge-dark' -%} {% comment %} Default badge style if needed, though not used here {% endcomment %}
+
+{%- if cert.style == 'fill' -%}
+  {%- assign card_style = cert.color | prepend: 'bg-' -%}
+  {%- if cert.color != 'light' -%}
+    {%- assign text_style  = 'text-white' -%}
+    {%- comment %} Badge style logic kept for consistency, though not used currently {% endcomment %}
+    {%- assign badge_style = 'badge-light text-' -%}
+    {%- assign badge_style = badge_style | append: cert.color -%}
+  {%- endif -%}
+{%- else -%} {% comment %} Default to border style {% endcomment %}
+  {%- assign card_style = cert.color | default: '' | prepend: 'border border-' -%}
+  {%- if cert.color -%}
+    {%- assign badge_style =  cert.color | prepend: 'badge-' -%}
+  {%- endif -%}
+{%- endif -%}
+
+{% comment %} Use the column class passed to it, default to col-md-6 {% endcomment %}
+{% assign cert_column_class = include.cert_col_class | default: 'col-md-6' %}
+
+<div class="{{ cert_column_class }} my-3 wow animated fadeIn" data-wow-delay=".15s">
+  {% comment %} Added 'post' class to potentially inherit hover effects etc. from _blog.scss {% endcomment %}
+  <div class="post card h-100 {{ card_style }}">
+    <div class="card-body {{ text_style }} d-flex flex-column"> {% comment %} Added flex-column {% endcomment %}
+      <h5 class="card-title">{{ cert.name }}</h5>
+      <p class="card-text mb-2">
+         <strong>Issuer:</strong> {{ cert.issuer }}
+      </p>
+      {%- if cert.credential_url -%}
+        <a href="{{ cert.credential_url }}" class="btn btn-sm {% if cert.style == 'fill' and cert.color != 'light' %}btn-outline-light{% else %}btn-outline-primary{% endif %} mt-2 mb-3" target="_blank" rel="noopener noreferrer">Verify Credential</a>
+      {%- endif -%}
+       {%- comment %} Footer-like element at the bottom {% endcomment %}
+      {%- if cert.date -%}
+      <div class="mt-auto"> {% comment %} Pushes the date to the bottom {% endcomment %}
+         <small class="text-muted {% if cert.style == 'fill' and cert.color != 'light' %}text-white-50{% endif %}">Obtained: {{ cert.date }}</small>
+      </div>
+      {%- endif -%}
+    </div>
+    {% comment %} Removed the standard card-footer to integrate date directly above {% endcomment %}
+  </div>
+</div>
