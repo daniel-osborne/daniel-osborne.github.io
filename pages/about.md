@@ -5,7 +5,7 @@ permalink: /about/
 weight: 3
 ---
 
-<div class="row mt-4">
+<div class="row mt-4 align-items-center">
 
   <div class="col-md-4 text-center">
 
