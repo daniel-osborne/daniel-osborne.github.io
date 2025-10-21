@@ -3,7 +3,7 @@
   issuer: TestOut Corporation
   date: "2022"
   color: primary
-  
+  credential_url: https://certification.testout.com/verifycert?certificateId=6-2C6-B3GDW
   # Omit style/color for default border
   # credential_url: optional_link_to_verificatio
 - name: Cisco Certified Network Associate Routing and Switching (CCNA RS)

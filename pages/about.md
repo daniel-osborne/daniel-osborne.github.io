@@ -26,8 +26,10 @@ weight: 3
     <h1 class="wow animated fadeIn" data-wow-delay=".1s"><b>About Me</b></h1>
 
     <div class="wow animated fadeIn" data-wow-delay=".15s">
-    Hi I am <b>{{ site.author.name }}</b> :wave:,<br>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    <p>Hi I am <b>{{ site.author.name }}</b> :wave:,<br>
+    By day, I work as a Network Architect, designing and implementing enterprise network solutions. My professional experience involves working extensively with technologies like Aruba Central, ClearPass, Cisco Catalyst Center, and configuring complex network environments.</p>
+    <p>Outside of work, my passion for technology continues in my home lab. I enjoy experimenting with self-hosting and virtualization, primarily using TrueNAS as the core of my setup.</p>
+    <p>This site serves as a place to share some of my projects, thoughts on technology, and learnings from both my professional work and personal explorations.</p>
     </div>
 
   </div>
