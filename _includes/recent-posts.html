@@ -1,0 +1,22 @@
+{% if site.posts.size > 0 %}
+<div class="row justify-content-center align-items-center mt-5">
+  <div class="col-lg-10 text-center">
+    <h2 class="mb-4 wow animated fadeIn" data-wow-delay=".15s">Recent Posts</h2>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-lg-8 col-md-10">
+    {% for post in site.posts limit:3 %}
+      <div class="mb-4">
+        {% include blog/post-card.html post_col_class='col-12' %} </div>
+    {% endfor %}
+  </div>
+</div>
+ {% if site.posts.size > 3 %}
+ <div class="row justify-content-center">
+   <div class="col-lg-8 col-md-10 text-center mt-2 mb-4">
+     <a href="{{ '/blog/' | relative_url }}" class="btn btn-outline-primary">View All Posts</a>
+   </div>
+ </div>
+ {% endif %}
+{% endif %}
