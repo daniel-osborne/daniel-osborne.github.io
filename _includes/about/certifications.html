@@ -1,0 +1,14 @@
+<div class="mt-5" >
+  <h2 class="mb-4 text-left">Certifications</h2>
+  {% if site.data.certifications %}
+    <div class="row justify-content-center">
+     {% for cert in site.data.certifications %}
+        {% include about/certification-card.html certification=cert cert_col_class='col-md-6' %} {% comment %} Adjust columns: 2 on medium, 3 on large screens {% endcomment %}
+     {% endfor %}
+    </div>
+  {% else %}
+    <div class="col-12 text-center text-muted">
+      <p>No certifications listed yet.</p>
+    </div>
+  {% endif %}
+</div>
