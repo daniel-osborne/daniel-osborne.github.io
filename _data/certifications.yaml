@@ -3,6 +3,7 @@
   issuer: TestOut Corporation
   date: "2022"
   color: primary
+  credential_id: 6-2C6-B3GDW
   credential_url: https://certification.testout.com/verifycert?certificateId=6-2C6-B3GDW
   # Omit style/color for default border
   # credential_url: optional_link_to_verificatio
@@ -10,14 +11,15 @@
   issuer: Cisco
   date: "2019"
   color: primary
+  credential_id: 436274168583CMYK
   credential_url: https://cp.certmetrics.com/cisco/en/public/verify/credential/436274168583CMYK
-  
- 
+
   # credential_url: optional_link_to_verification
 - name: Cisco Certified Entry Networking Technician (CCENT)
   issuer: Cisco
   date: "2018"
   color: primary
+  credential_id: 435154169428FNVH
   credential_url: https://cp.certmetrics.com/cisco/en/public/verify/credential/435154169428FNVH
   
   
@@ -25,6 +27,7 @@
   issuer: CompTIA
   date: "2018"
   color: primary
+  credential_id: R9R2W77HGLR41P9M
   credential_url: https://www.certmetrics.com/comptia/public/verification.aspx
   
 # Add more certifications as needed
