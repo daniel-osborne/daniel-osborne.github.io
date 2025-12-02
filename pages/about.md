@@ -9,9 +9,8 @@ weight: 3
 # **About Me**
 
 Hi I am {{ site.author.name }} :wave:,<br>
-By day, I work as a Network Architect, designing and implementing enterprise network solutions. My professional experience involves working extensively with technologies like Aruba Central, ClearPass, Cisco 
+By day, I work as a Network Architect, designing and implementing enterprise network solutions. My professional experience involves working extensively with technologies like Aruba Central, ClearPass, Cisco Catalyst Center, and configuring complex network environments.
 
-Catalyst Center, and configuring complex network environments.
 Outside of work, my passion for technology continues in my home lab. I enjoy experimenting with self-hosting and virtualization, primarily using TrueNAS as the core of my setup.
 
 This site serves as a place to share some of my projects, thoughts on technology, and learnings from both my professional work and personal explorations.
